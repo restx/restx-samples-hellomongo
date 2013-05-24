@@ -3,10 +3,10 @@ given:
   - time: 2013-05-24T12:00:00Z
   - collection: cities
     data: |
-        { "name" : "Bordeaux" }
+        { "_id": { "$oid" : "5167cec5856107c479739654"}, "name" : "Bordeaux" }
 wts:
   - when: GET cities
     then: |
         [
-          { "name" : "Bordeaux" }
+          { "_id": "5167cec5856107c479739654", "name" : "Bordeaux" }
         ]
