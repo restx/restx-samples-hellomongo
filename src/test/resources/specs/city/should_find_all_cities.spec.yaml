@@ -1,0 +1,9 @@
+title: "should find all cities"
+given:
+  - time: 2013-05-24T12:00:00Z
+wts:
+  - when: GET cities
+    then: |
+        [
+          { "name" : "Bordeaux" }
+        ]
