@@ -1,0 +1,27 @@
+{
+    "module": "io.restx:restx-samples-hellomongo:0.1-SNAPSHOT",
+    "packaging": "war",
+
+    "properties": {
+        "java.version": "1.7",
+        "restx.version": "0.2.6-SNAPSHOT"
+    },
+
+    "dependencies": {
+        "compile": [
+            "io.restx:restx-core:${restx.version}",
+            "io.restx:restx-core-annotation-processor:${restx.version}",
+            "io.restx:restx-factory:${restx.version}",
+            "io.restx:restx-factory-admin:${restx.version}",
+            "io.restx:restx-monitor-admin:${restx.version}",
+            "io.restx:restx-server-jetty:${restx.version}",
+            "io.restx:restx-apidocs:${restx.version}",
+            "io.restx:restx-specs-admin:${restx.version}",
+            "ch.qos.logback:logback-classic:1.0.9"
+        ],
+        "test": [
+            "io.restx:restx-specs-tests:${restx.version}",
+            "junit:junit:4.11"
+        ]
+    }
+}
