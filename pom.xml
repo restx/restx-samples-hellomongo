@@ -13,7 +13,7 @@
     <properties>
         <maven.compiler.target>1.7</maven.compiler.target>
         <maven.compiler.source>1.7</maven.compiler.source>
-        <restx.version>0.2.6-SNAPSHOT</restx.version>
+        <restx.version>0.2.6</restx.version>
     </properties>
 
     <dependencies>
@@ -30,6 +30,11 @@
         <dependency>
             <groupId>io.restx</groupId>
             <artifactId>restx-factory</artifactId>
+            <version>${restx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.restx</groupId>
+            <artifactId>restx-jongo</artifactId>
             <version>${restx.version}</version>
         </dependency>
         <dependency>
@@ -55,11 +60,6 @@
         <dependency>
             <groupId>io.restx</groupId>
             <artifactId>restx-specs-admin</artifactId>
-            <version>${restx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.restx</groupId>
-            <artifactId>restx-jongo</artifactId>
             <version>${restx.version}</version>
         </dependency>
         <dependency>
