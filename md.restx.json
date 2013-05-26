@@ -12,6 +12,7 @@
             "io.restx:restx-core:${restx.version}",
             "io.restx:restx-core-annotation-processor:${restx.version}",
             "io.restx:restx-factory:${restx.version}",
+            "io.restx:restx-jongo:${restx.version}",
             "io.restx:restx-factory-admin:${restx.version}",
             "io.restx:restx-monitor-admin:${restx.version}",
             "io.restx:restx-server-jetty:${restx.version}",
@@ -21,6 +22,7 @@
         ],
         "test": [
             "io.restx:restx-specs-tests:${restx.version}",
+            "io.restx:restx-jongo-specs-tests:${restx.version}",
             "junit:junit:4.11"
         ]
     }
