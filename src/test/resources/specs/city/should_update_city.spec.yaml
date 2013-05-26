@@ -1,0 +1,18 @@
+title: should update city
+given:
+  - time: 2013-05-26T09:17:30.440+02:00
+  - collection: cities
+    data: |
+        { "name" : "Bordeaux" , "_id" : { "$oid" : "51a1b6b10edeff044953bbc0"}}
+wts:
+  - when: |
+       PUT cities/51a1b6b10edeff044953bbc0
+
+        {"name": "bordeaux", "_id":"51a1b6b10edeff044953bbc0"}
+    then: |
+        {"name":"bordeaux","_id":"51a1b6b10edeff044953bbc0"}
+  - when: GET cities
+    then: |
+        [
+          { "_id": "51a1b6b10edeff044953bbc0", "name" : "bordeaux" }
+        ]

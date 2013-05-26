@@ -1,0 +1,10 @@
+title: should find city by id
+given:
+  - time: 2013-05-26T09:16:34.523+02:00
+  - collection: cities
+    data: |
+        { "name" : "Bordeaux" , "_id" : { "$oid" : "51a1b6b10edeff044953bbc0"}}
+wts:
+  - when: GET cities/51a1b6b10edeff044953bbc0
+    then: |
+        {"name":"Bordeaux","_id":"51a1b6b10edeff044953bbc0"}

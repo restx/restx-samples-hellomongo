@@ -1,0 +1,19 @@
+title: should_delete_city
+given:
+  - time: 2013-05-26T09:18:51.791+02:00
+  - collection: cities
+    data: |
+        { "name" : "Bordeaux" , "_id" : { "$oid" : "51a1b6b10edeff044953bbc0"}}
+wts:
+  - when: GET cities
+    then: |
+        [
+          { "_id": "51a1b6b10edeff044953bbc0", "name" : "Bordeaux" }
+        ]
+  - when: DELETE cities/51a1b6b10edeff044953bbc0
+    then: |
+        {"status":"deleted"}
+  - when: GET cities
+    then: |
+        [
+        ]

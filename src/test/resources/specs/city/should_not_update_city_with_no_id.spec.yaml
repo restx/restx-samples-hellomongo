@@ -1,0 +1,12 @@
+title: should not update city with no id
+given:
+  - time: 2013-05-26T09:17:10.132+02:00
+wts:
+  - when: |
+       PUT cities/51a1b6b10edeff044953bbc0
+
+        {"name": "bordeaux"}
+    then: |
+       400
+
+
