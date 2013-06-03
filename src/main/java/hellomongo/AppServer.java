@@ -18,7 +18,7 @@ public class AppServer {
     public static void main(String[] args) throws Exception {
         int port = Integer.valueOf(Optional.fromNullable(System.getenv("PORT")).or("8080"));
         WebServer server = new JettyWebServer(WEB_INF_LOCATION, WEB_APP_LOCATION, port, "0.0.0.0");
-        System.setProperty("restx.baseUri", server.baseUrl() + "/api");
+        System.setProperty("restx.mode", "dev");
         server.startAndAwait();
     }
 }
