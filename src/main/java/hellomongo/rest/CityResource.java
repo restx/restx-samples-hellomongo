@@ -21,8 +21,12 @@ public class CityResource {
     }
 
     @GET("/cities")
-    public Iterable<City> findCities() {
-        return cities.get().find().as(City.class);
+    public Iterable<City> findCities(Optional<String> name) {
+        if (name.isPresent()) {
+            return cities.get().find("{name: #}", name.get()).as(City.class);
+        } else {
+            return cities.get().find().as(City.class);
+        }
     }
 
     @POST("/cities")
