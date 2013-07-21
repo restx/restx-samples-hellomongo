@@ -7,12 +7,14 @@ import restx.Status;
 import restx.annotations.*;
 import restx.factory.Component;
 import restx.jongo.JongoCollection;
+import restx.security.PermitAll;
 
 import javax.inject.Named;
 
 import static restx.common.MorePreconditions.checkEquals;
 
 @Component @RestxResource
+@PermitAll
 public class CityResource {
     private final JongoCollection cities;
 
