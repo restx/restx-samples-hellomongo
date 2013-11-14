@@ -1,7 +1,7 @@
 package hellomongo;
 
 import com.google.common.base.Charsets;
-import restx.SignatureKey;
+import restx.security.SignatureKey;
 import restx.factory.Module;
 import restx.factory.Provides;
 import restx.jongo.JongoFactory;
